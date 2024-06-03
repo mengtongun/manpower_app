@@ -124,10 +124,13 @@ class _HomeScreenState extends State<HomeScreen> {
         enableFullWidth: true,
         title: Text(
           AppLocalizations.of(context).translate('home_tv_choose_language'),
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context)
+              .textTheme
+              .titleLarge!
+              .copyWith(color: Theme.of(context).colorScheme.secondary),
         ),
         headerColor: Theme.of(context).colorScheme.primary,
-        closeButtonColor: Theme.of(context).colorScheme.primary,
+        closeButtonColor: Theme.of(context).colorScheme.secondary,
         enableCloseButton: true,
         enableBackButton: false,
         onCloseButtonClicked: () {
@@ -142,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: Text(
                   object.language,
                   style:
-                      TextStyle(color: Theme.of(context).colorScheme.secondary),
+                      TextStyle(color: Theme.of(context).colorScheme.primary),
                 ),
                 trailing: Icon(
                   Icons.check,

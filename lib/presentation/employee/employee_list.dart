@@ -232,7 +232,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
                           height: 5,
                         ),
                         Text(
-                          "${_employee?.resignDate}",
+                          "${_employee?.resignDate == null ? "N/A" : _employee?.resignDate}",
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           style: TextStyle(
