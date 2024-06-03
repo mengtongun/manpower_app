@@ -1,0 +1,1 @@
+cd deploy && node server.js
