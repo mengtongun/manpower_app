@@ -6,6 +6,7 @@ import 'package:app/domain/entity/employee/employee.dart';
 import 'package:app/domain/usecase/employee/update_employee_usecase.dart';
 import 'package:app/presentation/employee/store/employee_store.dart';
 import 'package:app/presentation/home/store/theme/theme_store.dart';
+import 'package:app/utils/date/date_utils.dart';
 import 'package:app/utils/locale/app_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -207,7 +208,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
                         SizedBox(
                           height: 5,
                         ),
-                        Text("2019-06-07",
+                        Text("${_employee?.joinDate}",
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
                             style: Theme.of(context).textTheme.labelSmall),
@@ -231,7 +232,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
                           height: 5,
                         ),
                         Text(
-                          "2019-06-07",
+                          "${_employee?.resignDate}",
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           style: TextStyle(

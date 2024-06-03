@@ -142,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: Text(
                   object.language,
                   style:
-                      TextStyle(color: Theme.of(context).colorScheme.primary),
+                      TextStyle(color: Theme.of(context).colorScheme.secondary),
                 ),
                 trailing: Icon(
                   Icons.check,
